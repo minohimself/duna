@@ -1,0 +1,67 @@
+
+<table class="tab0">	   
+
+	<tr>	<td></td>
+
+		<td class="tdd">
+
+			<ul class="menud">
+
+				<li><a title="Filtrováním přenastavíte zobrazená data.">Filtrovat archiv »</a> 
+
+					<ul>
+
+						<li><%= link_to 'Vsechny zakony', laws_path(:zakony => 'vsechny') %>
+
+						<li><%= link_to 'Zarazene zakony', laws_path(:zakony => 'zarazene') %>
+
+						<li><%= link_to 'Projednavane zakony', laws_path(:zakony => 'projednavane') %>
+
+						<li><%= link_to 'Schvalene zakony', laws_path(:zakony => 'schvalene') %>
+
+						<li><%= link_to 'Zamitnute zakony', laws_path(:zakony => 'zamitnute') %>
+
+						<li><%= link_to 'Podepsane zakony', laws_path(:zakony => 'podepsane') %>
+
+					</ul>
+
+				</li>
+
+			</ul>		
+
+		</td>
+
+	</tr>
+
+	</table>
+  
+<h1><%= @title %></h1>
+
+<table class="tab1">
+  <tr>
+    <th>Label</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>State</th>
+    <th>Position</th>
+    <th>Submitter</th>
+    <th>Submitted</th>
+    <th>Enacted</th>
+    <th>Signed</th>
+  </tr>
+
+<% @laws.each do |law| %>
+  <tr>
+    <td><%= law.label %></td>
+    <td><%= law.title %></td>
+    <td><%= law.content %></td>
+    <td><%= law.state %></td>
+    <td><%= law.position %></td>
+    <td><%= law.submitters.first.nick %></td>
+    <td><%= law.submitted %></td>
+    <td><%= law.enacted %></td>
+    <td><%= law.signed %></td>
+  </tr>
+<% end %>
+</table>
+

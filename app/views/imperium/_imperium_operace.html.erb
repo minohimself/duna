@@ -1,0 +1,29 @@
+	<table class="tab1">
+
+	  <tr>
+
+    	<th>Obsah proběhlých akcí v Impériu</th>
+
+	    <th style="width:80px">Datum</th>
+
+    	<th style="width:80px">Cas</th>
+
+	  </tr>
+
+	  <% for operation in @operations %>
+
+    	<tr>
+
+    	  <td><%= operation.content %></td>
+
+	      <td><%= format_date(operation.date) %></td>
+
+    	  <td><%= format_time(operation.time) %></td>
+
+    	</tr>
+
+  	  <% end %>
+      
+      <td colspan="3"><%= link_to 'Zobrazit vsechny akce Impéria', operations_path(:jake => 'imperium') %></td>
+
+  	</table> 

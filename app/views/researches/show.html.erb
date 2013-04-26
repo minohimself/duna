@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lvl:</b>
+  <%= @research.lvl %>
+</p>
+
+<p>
+  <b>Technology:</b>
+  <%= @research.technology_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @research.user_id %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_research_path(@research) %> |
+<%= link_to 'Back', researches_path %>

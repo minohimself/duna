@@ -1,0 +1,20 @@
+<% title @title %>
+
+<table class="tab1">
+  <tr>
+    <th>Obsah akce</th>
+    <th style="width:80px">Datum</th>
+    <th style="width:80px">Cas</th>
+  </tr>
+  <% for operation in @operations %>
+    <tr>
+      <td><%= operation.content %></td>
+      <td><%= format_date(operation.date) %></td>
+      <td><%= format_time(operation.time) %></td>
+    </tr>
+  <% end %>
+  <tr>
+  	<%= paginate @operations %>
+  </tr>
+</table>
+

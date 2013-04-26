@@ -1,0 +1,150 @@
+
+  <td class="stred">   
+
+  
+
+<!-- !!!!!!!!! POČÁTEK - OBLAST ZMĚNY  V KÓDU PRO TUTO STRÁNKU !!!!! -->
+
+            
+
+    <table class="tab0">
+
+  <tr>  <td>
+
+      <link<a href="index.htm" title="Home">⌂</a>  
+
+      <a>Výzkum a ekonomika</a> » 
+        <%= link_to "Ekonomický výzkum", technologies_path %>
+
+      
+
+    </td>
+
+  </tr>
+
+  </table>
+
+  
+
+  
+
+  <table class="vyzkum" style="background-image: url(image/8/mes.png")>
+
+  
+
+  
+
+    
+
+    
+
+    
+
+      <!-- !!!!! pozor! 
+
+      
+
+      nevyzkoumane bunky maji jen td, vyzkoumane maji tr class="v1" 
+
+      
+
+      u bunek, ktere zobrazuji i budovu je to slozitejsi, jsou rozliseny 0 a 1
+
+      napr: nevyzkoumane mesto :  /mes_0.png
+
+        vyzkoumane mesto:   /mes_1.png
+
+
+
+      !!!!! -->
+
+      <% if !@technologies.blank? %>
+              <% for technology in  @technologies %>
+        <tr>
+        <th style=background-image:(<%= technology.image_url %>)><%= technology.name %></th>
+        
+        
+        
+        <%= form_tag vylepsi_technology_path(:technology => technology.id, :user_id => current_user) do %>
+          <td class="v2"><%= submit_tag number_with_precision technology.cena_technology(current_user), :precision => 0, :remote => true %></td>
+            
+            <%end%>
+                
+            
+            <% technology.max_lvl.times do |lvl| %>
+            <% obr=technology.image_lvl.split('*').map(&:to_i) %>
+                      
+           
+              <% if technology.vylepseno(current_user) >= lvl %>
+              <% if obr.include?(lvl)%>
+                <td class="v1" style=background-image:(<%= technology.cesta_technologie("v")%>)>
+                <%= lvl+1 %>
+                </td>
+                
+            
+                <% else %>
+                <td class="v1">
+                <%= lvl+1 %>
+                </td>
+
+              <%end%>
+
+            <% else %>
+            <% if obr.include?(lvl)%>
+            <td style=background-image:(<%= technology.cesta_technologie("n")%>)>
+            <%= lvl+1 %></td>
+            <%else%>
+            <td>
+                <%= lvl+1 %>
+                </td>
+            <%end%>
+            <%end%>
+              
+             
+
+            
+         
+        
+      
+        <% end %></tr>
+    <% end %>
+            <% else %>
+              Halooooo
+            <% end %>
+
+      
+    
+        
+        
+         
+         
+        
+        
+        
+
+      
+        
+      
+
+
+    
+
+     
+
+  
+
+  
+
+  </table>
+
+  
+
+  
+
+  
+
+<!-- !!!!!!!!! KONEC - OBLAST ZMĚNY  V KÓDU PRO TUTO STRÁNKU !!!!! -->
+
+
+
+  

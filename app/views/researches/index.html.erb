@@ -1,0 +1,29 @@
+<h1>Listing researches</h1>
+
+<table>
+  <tr>
+    <th>Lvl</th>
+    <th>Technology</th>
+    <th>User</th>
+    <th>Max lvl</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @researches.each do |research| %>
+  <tr>
+    <td><%= research.lvl %></td>
+    <td><%= research.technology_id %></td>
+    <td><%= research.user_id %></td>
+  
+    <td><%= link_to 'Show', research %></td>
+    <td><%= link_to 'Edit', edit_research_path(research) %></td>
+    <td><%= link_to 'Destroy', research, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Research', new_research_path %>

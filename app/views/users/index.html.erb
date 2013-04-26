@@ -1,0 +1,45 @@
+<% title "Databáze hráčů" %>
+
+    <table class="tab0">
+
+		<tr>
+			<td>
+				<a href="#" title="Home">⌂</a> » 
+				<%= link_to "Imperiální databáze hráčů", users_path %> » 
+				<a href="#">Profily</a>
+			</td>
+
+			<%= render :partial => 'layouts/filter_database' %>
+
+		</tr>
+
+	</table>
+
+<table class="tab2">
+  <tr>	<th class="l">Jméno hráče</th>
+    <th>Národ</th>
+    <th>Celková síla</th>
+    <th>Vliv</th>
+    <th style="width:80px">Počet lén</th>
+    <th class="r" style="width:75px">Akce</th>
+  </tr>
+
+  <% for user in @users do %>
+      <tr>	<td><%= link_to user.nick, user %></td>
+        <td><%= link_to user.house.name, user.house %></td>
+        <td>11111***</td>
+        <td><%= user.influence %></td>
+        <td><%= user.fields.count %></td>
+        <td>
+          <a href="#" alt="Pošta"><img src = "image/cssimage/posta.png" alt="Napsat hráči" title="Napsat hráči"></a>
+          <a href="#" alt="Útok"><img src = "image/cssimage/zautocit.png" alt="Zautočit na hráče" title="Zautočit na hráče"></a>
+          <a href="#" alt="Profil"><img src = "image/avatar/id1.png" alt="Profil hráče" title="Profil hráče"></a>
+        </td>
+      </tr>
+    <% end %>
+    <tr>
+      <%= paginate @users %>
+    </tr>
+
+  </table>
+
