@@ -1,5 +1,5 @@
 class Technology < ActiveRecord::Base
-  attr_accessible :description, :name, :price, :max_lvl, :bonus, :bonus_type, :image_url
+  attr_accessible :description, :name, :price, :max_lvl, :bonus, :bonus_type, :image_url, :image_lvl
 
   has_many :researches
   has_many :users, :through => :researches
@@ -45,30 +45,38 @@ class Technology < ActiveRecord::Base
     end
   end
 
+  public
+  def levely
+    if self.image_lvl
+    levely = self.image_lvl.split('*').map(&:to_i)
+    end
+    return levely
+  end
+
 def cesta_technologie(typ)
     cesta = "technologie/"
     case self.id
-    when "39"
+    when "1"
       cesta += "Investice-do-Infrastruktury/"
-    when "40"
+    when "2"
       cesta += "Investice-do-ekonomiky/"
-    when "41"
+    when "3"
       cesta += "Investice-do-prumyslu/"
-    when "42"
+    when "4"
       cesta += "Investice-do-vyzkumu/"
-    when "43"
+    when "5"
       cesta += "Investice-do-koreni/"
-    when "44"
+    when "6"
       cesta += "Investice-do-armady/"
-    when "45"
+    when "7"
       cesta += "Investice-do-vyroby/"
-    when "46"
+    when "8"
       cesta += "Investice-do-pechoty/"
-    when "47"
+    when "9"
       cesta += "Investice-do-flotily/"
-    when "48"
+    when "10"
       cesta += "Bojova-technika/"
-    when "49"
+    when "11"
       cesta += "Obrana-technologie/"
     end
     cesta += typ + ".png"

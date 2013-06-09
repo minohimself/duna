@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "prerequisity_1"
     t.integer  "prerequisity_2"
     t.integer  "prerequisity_3"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
   end
 
   add_index "buildings", ["kind"], :name => "index_buildings_on_kind"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "system_name",    :default => ""
     t.integer  "position"
     t.boolean  "discovered",     :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "effects", :force => true do |t|
@@ -77,8 +77,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.decimal  "material_cost",    :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "solar_cost",       :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "exp_cost",         :precision => 12, :scale => 4, :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
   end
 
   add_index "effects", ["name"], :name => "index_effects_on_name"
@@ -86,9 +86,9 @@ ActiveRecord::Schema.define(:version => 31) do
   create_table "environments", :force => true do |t|
     t.integer  "planet_id",                             :null => false
     t.integer  "property_id",                           :null => false
-    t.date     "started_at",  :default => '2012-05-20'
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "started_at",  :default => '2013-06-07'
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "environments", ["planet_id"], :name => "index_environments_on_planet_id"
@@ -98,8 +98,8 @@ ActiveRecord::Schema.define(:version => 31) do
   create_table "eods", :force => true do |t|
     t.integer  "user_id",                                                                              :null => false
     t.integer  "field_id"
-    t.date     "date",                                              :default => '2012-05-20',          :null => false
-    t.time     "time",                                              :default => '2000-01-01 21:55:45', :null => false
+    t.date     "date",                                              :default => '2013-06-07',          :null => false
+    t.time     "time",                                              :default => '2000-01-01 20:27:20', :null => false
     t.integer  "order",                                                                                :null => false
     t.integer  "solar_income",                                      :default => 0
     t.integer  "exp_income",                                        :default => 0
@@ -120,16 +120,16 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "arrakis"
     t.integer  "leader"
     t.string   "mentats"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                                           :null => false
+    t.datetime "updated_at",                                                                           :null => false
   end
 
   create_table "estates", :force => true do |t|
     t.integer  "building_id",                :null => false
     t.integer  "field_id",                   :null => false
     t.integer  "number",      :default => 1, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "estates", ["building_id"], :name => "index_estates_on_building_id"
@@ -141,8 +141,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "name",                        :null => false
     t.decimal  "pos_x",      :default => 0.0
     t.decimal  "pos_y",      :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   add_index "fields", ["planet_id"], :name => "index_fields_on_planet_id"
@@ -154,8 +154,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.date     "datum"
     t.string   "slovo"
     t.decimal  "cislo",      :precision => 12, :scale => 4
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "houses", :force => true do |t|
@@ -167,8 +167,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.decimal  "exp",             :precision => 12, :scale => 4, :default => 0.0
     t.boolean  "playable",                                       :default => true
     t.decimal  "melange_percent", :precision => 12, :scale => 4, :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
     t.decimal  "influence"
   end
 
@@ -177,9 +177,9 @@ ActiveRecord::Schema.define(:version => 31) do
   create_table "influences", :force => true do |t|
     t.integer  "effect_id",                            :null => false
     t.integer  "field_id",                             :null => false
-    t.date     "started_at", :default => '2012-05-20'
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "started_at", :default => '2013-06-07'
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   add_index "influences", ["effect_id"], :name => "index_influences_on_effect_id"
@@ -196,8 +196,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.datetime "submitted"
     t.datetime "enacted"
     t.datetime "signed"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "operations", :force => true do |t|
@@ -206,10 +206,10 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "subhouse_id"
     t.string   "kind"
     t.string   "content"
-    t.date     "date",        :default => '2012-05-20'
-    t.time     "time",        :default => '2000-01-01 21:55:45'
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "date",        :default => '2013-06-07'
+    t.time     "time",        :default => '2000-01-01 20:27:20'
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "planet_types", :force => true do |t|
@@ -221,8 +221,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.decimal  "material_bonus",   :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "solar_bonus",      :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "exp_bonus",        :precision => 12, :scale => 4, :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
   end
 
   add_index "planet_types", ["name"], :name => "index_planet_types_on_name"
@@ -234,9 +234,9 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "system_name"
     t.integer  "position"
     t.boolean  "available_to_all", :default => false
-    t.date     "discovered_at",    :default => '2012-05-20'
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "discovered_at",    :default => '2013-06-07'
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   add_index "planets", ["house_id"], :name => "index_planets_on_house_id"
@@ -247,16 +247,16 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "user_id"
     t.integer  "law_id"
     t.string   "choice",     :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "posts", :force => true do |t|
     t.integer  "topic_id",   :null => false
     t.integer  "user_id",    :null => false
     t.text     "content",    :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "properties", :force => true do |t|
@@ -273,8 +273,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.decimal  "material_cost",    :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "solar_cost",       :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "exp_cost",         :precision => 12, :scale => 4, :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
   end
 
   add_index "properties", ["name"], :name => "index_properties_on_name"
@@ -292,15 +292,15 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "field_id"
     t.decimal  "population", :precision => 12, :scale => 4, :default => 0.0
     t.decimal  "material",   :precision => 12, :scale => 4, :default => 0.0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                 :null => false
+    t.datetime "updated_at",                                                 :null => false
   end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
@@ -313,8 +313,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.decimal  "melange"
     t.decimal  "material"
     t.integer  "exp"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "subhouses", ["house_id"], :name => "index_subhouses_on_house_id"
@@ -326,14 +326,14 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "kind",        :null => false
     t.string   "name",        :null => false
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "systems", :force => true do |t|
     t.string   "system_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "technologies", :force => true do |t|
@@ -355,8 +355,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "name",           :null => false
     t.integer  "last_poster_id"
     t.datetime "last_post_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -383,8 +383,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.boolean  "court",                                        :default => false
     t.boolean  "vezir",                                        :default => false
     t.boolean  "admin",                                        :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                      :null => false
+    t.datetime "updated_at",                                                      :null => false
     t.decimal  "influence"
     t.string   "web",                                          :default => " "
     t.string   "icq",                                          :default => " "
@@ -404,8 +404,8 @@ ActiveRecord::Schema.define(:version => 31) do
     t.integer  "elector",    :null => false
     t.integer  "elective",   :null => false
     t.string   "typ",        :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
