@@ -3,6 +3,7 @@ class Technology < ActiveRecord::Base
 
   has_many :researches
   has_many :users, :through => :researches
+  has_one :effect
 
   validates_uniqueness_of :name
 
@@ -19,6 +20,7 @@ class Technology < ActiveRecord::Base
      research = self.researches.where(:user_id => user.id).first
      if research
      research.update_attribute(:lvl, research.lvl+1)
+
    else
      Research.new(
        :technology_id => self.id,
@@ -26,7 +28,11 @@ class Technology < ActiveRecord::Base
        :user_id => user.id
      ).save
    end
+   effects = eff
+
  end
+
+
 
  def vylepseno(user)
     research = self.researches.where(:user_id => user).first

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails duna: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="4bbd9352-8d7e-4783-af25-67ca8260edba">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:C:\Sites\duna\db\development.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog=""/>
+    <table name="app_logy" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="cas" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="login" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="login_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="controller" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="action" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="action_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="session" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="params" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="referer" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="duration" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="buildings" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="kind" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="level" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pop_limit_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="prerequisity_1" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="prerequisity_2" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="prerequisity_3" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_buildings_on_name" unique="true" columns="name"/>
+      <index name="index_buildings_on_level" unique="true" columns="level"/>
+      <index name="index_buildings_on_kind" unique="true" columns="kind"/>
+    </table>
+    <table name="discoverables" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="planet_type_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="system_name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="position" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="discovered" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="effects" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="population_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pop_limit_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="duration" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_effects_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="environments" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="planet_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="property_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="started_at" sqlType="DATE" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_environments_on_started_at" unique="true" columns="started_at"/>
+      <index name="index_environments_on_property_id" unique="true" columns="property_id"/>
+      <index name="index_environments_on_planet_id" unique="true" columns="planet_id"/>
+    </table>
+    <table name="eods" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="date" sqlType="DATE" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="time" sqlType="TIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="order" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="solar_income" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exp_income" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="material_income" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_income" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="solar_expense" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exp_expense" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="material_expense" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_expense" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="melange_income" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_expense" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_store" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exp_store" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="material_store" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_store" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="melange_store" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="imperator" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="arrakis" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="leader" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="mentats" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="estates" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="building_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="number" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_estates_on_field_id" unique="true" columns="field_id"/>
+      <index name="index_estates_on_building_id" unique="true" columns="building_id"/>
+    </table>
+    <table name="fields" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="planet_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="pos_x" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pos_y" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_fields_on_planet_id" unique="true" columns="planet_id"/>
+      <index name="index_fields_on_user_id" unique="true" columns="user_id"/>
+    </table>
+    <table name="globals" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="setting" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="value" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="datum" sqlType="DATE" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="slovo" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="cislo" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="houses" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="leader" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="playable" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_percent" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="influence" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_houses_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="influences" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="effect_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="started_at" sqlType="DATE" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_influences_on_started_at" unique="true" columns="started_at"/>
+      <index name="index_influences_on_field_id" unique="true" columns="field_id"/>
+      <index name="index_influences_on_effect_id" unique="true" columns="effect_id"/>
+    </table>
+    <table name="laws" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="label" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="state" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="position" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="submitter" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="submitted" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="enacted" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="signed" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="operations" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="subhouse_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="kind" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="time" sqlType="TIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="planet_types" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="fields" sqlType="DECIMAL(4,0)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pop_limit_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_planet_types_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="planets" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="planet_type_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="system_name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="position" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="available_to_all" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="discovered_at" sqlType="DATE" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_planets_on_house_id" unique="true" columns="house_id"/>
+      <index name="index_planets_on_planet_type_id" unique="true" columns="planet_type_id"/>
+      <index name="index_planets_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="polls" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="law_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="choice" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="posts" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="topic_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="content" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="properties" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="population_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pop_limit_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_bonus" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="duration" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="population_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="solar_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp_cost" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_properties_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="researches" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="lvl" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="technology_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="resources" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="field_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="population" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="sessions" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="session_id" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="data" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_sessions_on_updated_at" unique="true" columns="updated_at"/>
+      <index name="index_sessions_on_session_id" unique="true" columns="session_id"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="subhouses" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="solar" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="melange" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="material" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_subhouses_on_house_id" unique="true" columns="house_id"/>
+      <index name="index_subhouses_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="syselaads" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="subhouse_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="kind" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="systems" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="system_name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="technologies" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="max_lvl" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="bonus" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="bonus_type" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="image_url" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="image_lvl" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="topics" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="syselaad_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="last_poster_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="last_post_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="username" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="nick" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="password_hash" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="password_salt" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="subhouse_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="solar" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="melange" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exp" sqlType="DECIMAL(12,4)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="leader" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="mentat" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="army_mentat" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="diplomat" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="general" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="vicegeneral" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="landsraad" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="arrakis" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="emperor" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="regent" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="court" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="vezir" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="admin" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="influence" sqlType="DECIMAL" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="web" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="icq" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="gtalk" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="skype" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="facebook" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="presentation" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="active" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_users_on_subhouse_id" unique="true" columns="subhouse_id"/>
+      <index name="index_users_on_house_id" unique="true" columns="house_id"/>
+      <index name="index_users_on_username" unique="true" columns="username"/>
+    </table>
+    <table name="votes" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="house_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="elector" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="elective" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="typ" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>

@@ -9,7 +9,7 @@ class Prepocet
       Prepocet.zmen_vudce(order)
       Prepocet.zpristupni_planety
       Prepocet.produkce_suroviny(order)
-      Prepocet.produkce_melanz(order)
+      Prepocet.produkce _melanz(order)
       
       Prepocet.kontrola_zakonu
       

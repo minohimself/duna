@@ -86,9 +86,17 @@ class TechnologiesController < ApplicationController
 
   def update
     @technology = Technology.find(params[:id])
-    @technology.update_attributes(params[:technology])
-    respond_with @technology
-
+    
+    #respond_with @technology
+    respond_to do |format|
+      if @technology.update_attributes(params[:technology])
+        format.html { redirect_to @technology, notice: 'Research was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @technology.errors, status: :unprocessable_entity }
+      end
+    end
     
   end
 

@@ -32,7 +32,7 @@ class Building < ActiveRecord::Base
   
   has_many :fields, :through => :estates
   has_many :estates
-  
+
   def naklady_stavba_solary
     self.sum_bonus * self.solar_cost * Constant.ksv
   end

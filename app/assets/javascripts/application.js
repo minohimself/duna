@@ -9,3 +9,12 @@
 //= require jquery.purr
 //= require best_in_place
 //= require_tree .
+
+//$(document).ready(function(){
+//  $("th").click(function(){
+//    $("#mino").slideToggle();
+//  });
+//});
+        
+
+   
