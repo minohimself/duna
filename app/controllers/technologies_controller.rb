@@ -2,7 +2,7 @@ class TechnologiesController < ApplicationController
   # GET /technologies
   # GET /technologies.json
   def index
-    @technologies = Technology.includes(:researches)
+    @technologies = Technology.includes(:researches).where(:technology_discovered => 1)
     
   
 
