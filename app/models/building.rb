@@ -32,13 +32,21 @@ class Building < ActiveRecord::Base
   
   has_many :fields, :through => :estates
   has_many :estates
+  has_many :users, :through => :fields
+
+
+  def exp_tech
+    research = current_user.researches.where(:technology_id => 1).first!
+    lvl = research.lvl
+    1 - (lvl * 0.02) 
+  end
 
   def naklady_stavba_solary
-    self.sum_bonus * self.solar_cost * Constant.ksv
+    self.sum_bonus * self.solar_cost * Constant.ksv * self.exp_tech
   end
   
   def naklady_stavba_material
-    self.sum_bonus * self.material_cost * Constant.kmav
+    self.sum_bonus * self.material_cost * Constant.kmav * self.exp_tech
   end
   
   def naklady_stavba_populace
