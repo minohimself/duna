@@ -48,11 +48,7 @@ class Field < ActiveRecord::Base
     end
   end
   
-  def exp_tech
-    research = current_user.researches.where(:technology_id => 2).first!
-    lvl = research.lvl
-    lvl * 0.02
-  end
+ 
     
     
   
