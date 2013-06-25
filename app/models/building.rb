@@ -40,14 +40,18 @@ class Building < ActiveRecord::Base
     research = current_user.researches.where(technology.id => ceho).first!
     lvl = research.lvl
     if lvl =! 0
-      lvl * 0.02 + 1
+      if ceho == "L" || ceho == "E"
+        1 - lvl * 0.02
+      else
+        lvl * 0.02 + 1
+      end
     else
       lvl = 1
     end
   end
 
   def naklady_stavba_solary
-    self.sum_bonus * self.solar_cost * Constant.ksv * (self.exp_tech("L") * (-1))
+    self.sum_bonus * self.solar_cost * Constant.ksv * self.exp_tech("L") 
   end
   
   def naklady_stavba_material
