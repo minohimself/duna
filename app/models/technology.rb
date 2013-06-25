@@ -28,7 +28,7 @@ class Technology < ActiveRecord::Base
        :user_id => user.id
      ).save
    end
-   effects = eff
+   
 
  end
 
