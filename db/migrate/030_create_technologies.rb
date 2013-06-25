@@ -9,6 +9,7 @@ class CreateTechnologies < ActiveRecord::Migration
       t.string :bonus_type
       t.string :image_url
       t.string :image_lvl
+      t.integer :discovered
 
       t.timestamps
     end
