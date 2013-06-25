@@ -72,7 +72,7 @@ class FieldsController < ApplicationController
   end
   
   def postavit_budovu
-    test = current_user.researches.where(:technology_id => 1).first!
+    #test = current_user.researches.where(:technology_id => 1).first!
     @field = Field.find(params[:field])
     if @field.user == current_user || current_user.admin?
       @resource = @field.resource
