@@ -35,9 +35,9 @@ class Building < ActiveRecord::Base
   has_many :users, :through => :fields
 
 
-  def exp_tech(ceho)
-    technology = current_user.technologies.where(:technology_bonus_type => ceho).first!
-    research = current_user.researches.where(technology.id => ceho).first!
+  def exp_tech(user, ceho)
+    technology = user.technologies.where('bonus_type' => ceho).first!
+    research = user.researches.where('technology_id' => technology.id).first!
     lvl = research.lvl
     if lvl =! 0
       if ceho == "L" || ceho == "E"
@@ -51,11 +51,11 @@ class Building < ActiveRecord::Base
   end
 
   def naklady_stavba_solary
-    self.sum_bonus * self.solar_cost * Constant.ksv * self.exp_tech("L") 
+    self.sum_bonus * self.solar_cost * Constant.ksv  
   end
   
   def naklady_stavba_material
-    self.sum_bonus * self.material_cost * Constant.kmav * self.exp_tech_stavba
+    self.sum_bonus * self.material_cost * Constant.kmav 
   end
   
   def naklady_stavba_populace
@@ -71,15 +71,15 @@ class Building < ActiveRecord::Base
   end
   
   def vynos_solar
-    self.solar_bonus * Constant.kvynoss * Constant.ksp * self.exp_tech("S")
+    self.solar_bonus * Constant.kvynoss * Constant.ksp 
   end
  
   def vynos_material
-    self.material_bonus * Constant.kvynosma * Constant.kmap * self.exp_tech("M")
+    self.material_bonus * Constant.kvynosma * Constant.kmap 
   end
  
   def vynos_exp
-    self.exp_bonus * Constant.kvynose * Constant.kep * self.exp_tech("E")
+    self.exp_bonus * Constant.kvynose * Constant.kep 
   end
   def vynos_melange
     self.melange_bonus * Constant.kvynosme * Constant.kmep
