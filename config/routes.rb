@@ -1,4 +1,8 @@
 DuneOnline::Application.routes.draw do
+  mount Messaging::Engine => "/messaging"
+
+  devise_for :messaging_users
+
   resources :researches
 
 

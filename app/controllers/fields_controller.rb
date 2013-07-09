@@ -11,6 +11,8 @@ class FieldsController < ApplicationController
   def show
     @field = Field.find(params[:id])
     @owner = @field.user
+    lvl = current_user.researches.where('technology_id' => 1).first
+    @bonus = (1 - (lvl.lvl * 0.02)).to_f
     if current_user.admin?
       
     else
@@ -72,21 +74,23 @@ class FieldsController < ApplicationController
   end
   
   def postavit_budovu
-    #test = current_user.researches.where(:technology_id => 1).first!
     @field = Field.find(params[:field])
     if @field.user == current_user || current_user.admin?
       @resource = @field.resource
       @budova = Building.find(params[:budova])
+      tech = current_user.technologies.where('bonus_type' => "L")
+      lvl = current_user.researches.where('technology_id' => tech).first
+      bonus = (1 - (lvl.lvl * 0.02)).to_f
 
-      cena_sol = @budova.naklady_stavba_solary.to_f
-      cena_mat = @budova.naklady_stavba_material.to_f
+      cena_sol = (@budova.naklady_stavba_solary * bonus).to_d
+      cena_mat = (@budova.naklady_stavba_material * bonus).to_d
       mat_na_poli = @resource.material
       pocet_budov = params[:pocet_budov_stavba].to_i
 
-      if sol * pocet_budov > current_user.solar
+      if cena_sol * pocet_budov > current_user.solar
         flash[:error] = "Nedostatek Solaru (chybi #{cena_sol * pocet_budov - current_user.solar} S)."
         redirect_to @field
-      elsif mat * pocet_budov > mat_na_poli
+      elsif cena_mat * pocet_budov > mat_na_poli
         flash[:error] = "Nedostatek materialu (chybi #{cena_mat * pocet_budov - mat_na_poli} kg)."
         redirect_to @field
       else

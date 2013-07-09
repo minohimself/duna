@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 31) do
+ActiveRecord::Schema.define(:version => 38) do
 
   create_table "app_logy", :force => true do |t|
     t.datetime "cas",                      :null => false
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(:version => 31) do
   add_index "buildings", ["kind"], :name => "index_buildings_on_kind"
   add_index "buildings", ["level"], :name => "index_buildings_on_level"
   add_index "buildings", ["name"], :name => "index_buildings_on_name"
+
+  create_table "conversations", :force => true do |t|
+    t.string   "subject",    :default => ""
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "discoverables", :force => true do |t|
     t.string   "name",                              :null => false
@@ -200,6 +206,44 @@ ActiveRecord::Schema.define(:version => 31) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "messaging_users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "messaging_users", ["email"], :name => "index_messaging_users_on_email", :unique => true
+  add_index "messaging_users", ["reset_password_token"], :name => "index_messaging_users_on_reset_password_token", :unique => true
+
+  create_table "notifications", :force => true do |t|
+    t.string   "type"
+    t.text     "body"
+    t.string   "subject",              :default => ""
+    t.integer  "sender_id"
+    t.string   "sender_type"
+    t.integer  "conversation_id"
+    t.boolean  "draft",                :default => false
+    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",                              :null => false
+    t.integer  "notified_object_id"
+    t.string   "notified_object_type"
+    t.string   "notification_code"
+    t.string   "attachment"
+    t.boolean  "global",               :default => false
+    t.datetime "expires"
+  end
+
+  add_index "notifications", ["conversation_id"], :name => "index_notifications_on_conversation_id"
+
   create_table "operations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "house_id"
@@ -279,6 +323,20 @@ ActiveRecord::Schema.define(:version => 31) do
 
   add_index "properties", ["name"], :name => "index_properties_on_name"
 
+  create_table "receipts", :force => true do |t|
+    t.integer  "receiver_id"
+    t.string   "receiver_type"
+    t.integer  "notification_id",                                  :null => false
+    t.boolean  "is_read",                       :default => false
+    t.boolean  "trashed",                       :default => false
+    t.boolean  "deleted",                       :default => false
+    t.string   "mailbox_type",    :limit => 25
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+  end
+
+  add_index "receipts", ["notification_id"], :name => "index_receipts_on_notification_id"
+
   create_table "researches", :force => true do |t|
     t.integer  "lvl"
     t.integer  "technology_id"
@@ -345,6 +403,7 @@ ActiveRecord::Schema.define(:version => 31) do
     t.string   "bonus_type"
     t.string   "image_url"
     t.string   "image_lvl"
+    t.integer  "discovered"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

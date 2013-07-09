@@ -2,9 +2,7 @@ class TechnologiesController < ApplicationController
   # GET /technologies
   # GET /technologies.json
   def index
-    @technologies = Technology.includes(:researches).where(:technology_discovered => 1)
-    
-  
+    @technologies = Technology.includes(:researches).where('discovered' => 1)
 
     respond_to do |format|
       format.html # index.html.erb

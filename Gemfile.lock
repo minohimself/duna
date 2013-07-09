@@ -6,6 +6,28 @@ GIT
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
 
+GIT
+  remote: git://github.com/frodefi/rails-messaging.git
+  revision: df7440b2ddf902b76b8f7f8e38653cc2255d7501
+  specs:
+    messaging (0.0.1)
+      carrierwave
+      devise
+      haml
+      jquery-rails
+      rails (~> 3.2.2)
+      simple_form
+      sunspot_rails
+
+GIT
+  remote: git://github.com/ging/mailboxer.git
+  revision: 0190bab54f6c85b78955bdf9786c0d074b410c75
+  specs:
+    mailboxer (0.10.2)
+      carrierwave (>= 0.5.8)
+      foreigner (>= 0.9.1)
+      rails (> 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -46,6 +68,10 @@ GEM
       rails (~> 3.1)
     builder (3.0.4)
     cancan (1.6.8)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     chronic (0.9.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -55,6 +81,11 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     decent_exposure (2.0.1)
+    devise (2.2.4)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -64,6 +95,10 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
+    foreigner (1.4.2)
+      activerecord (>= 3.0.0)
+    haml (4.0.3)
+      tilt
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -82,9 +117,16 @@ GEM
       rack-contrib
       rails
     mime-types (1.19)
+    mini_portile (0.5.0)
     multi_json (1.5.0)
     nifty-generators (0.4.6)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    nokogiri (1.6.0-x86-mingw32)
+      mini_portile (~> 0.5.0)
+    orm_adapter (0.4.0)
     polyglot (0.3.3)
+    pr_geohash (1.0.0)
     rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -116,6 +158,8 @@ GEM
       rake
     rdoc (3.12)
       json (~> 1.4)
+    rsolr (1.0.9)
+      builder (>= 2.1.2)
     rspec-core (2.12.2)
     rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
@@ -132,6 +176,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.1.0)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -139,6 +186,12 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
     sqlite3 (1.3.7-x86-mingw32)
+    sunspot (2.0.0)
+      pr_geohash (~> 1.0)
+      rsolr (~> 1.0.7)
+    sunspot_rails (2.0.0)
+      nokogiri
+      sunspot (= 2.0.0)
     thor (0.16.0)
     tilt (1.3.3)
     treetop (1.4.12)
@@ -150,6 +203,8 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.1)
+      rack (>= 1.0)
     whenever (0.8.2)
       activesupport (>= 2.3.4)
       chronic (>= 0.6.3)
@@ -169,6 +224,8 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails
   kaminari
+  mailboxer!
+  messaging!
   meta_request (= 0.2.0)
   nifty-generators
   rails (= 3.2.11)

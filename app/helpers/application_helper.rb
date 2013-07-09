@@ -24,8 +24,8 @@ module ApplicationHelper
     end
   end
 
-  def format_mena(expy, castka, mena="", des_cisla=true)
-    castka = castka - (castka * expy)
+
+  def format_mena(castka, mena="", des_cisla=true)
     if des_cisla
       text=number_to_currency(castka, {:unit => mena, :locale => :cs, :precision => 2, :format => "%n %u"})
     else

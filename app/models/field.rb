@@ -47,11 +47,8 @@ class Field < ActiveRecord::Base
       self.user == user
     end
   end
-  
- 
-    
-    
-  
+
+  #todo spravit aby sa zapocitavali technologie
   def vynos(ceho)
     vynos = 0.0
     case ceho
@@ -70,10 +67,10 @@ class Field < ActiveRecord::Base
     for building in self.buildings.where('kind LIKE ?', '%'+kind+'%') do
       pocet = self.estates.where(:building_id => building).first.number
       attr = 'vynos_' + ceho
-      if pop > building.nutna_pop 
+      if pop > building.nutna_pop
         vynos += building.send(attr) * pocet
       else
-        vynos += building.send(attr) * pocet * Constant.vynos_bez_pop
+        vynos += building.send(attr) * pocet
       end
     end
     vynos

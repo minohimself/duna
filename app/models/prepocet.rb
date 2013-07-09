@@ -9,7 +9,7 @@ class Prepocet
       Prepocet.zmen_vudce(order)
       Prepocet.zpristupni_planety
       Prepocet.produkce_suroviny(order)
-      Prepocet.produkce _melanz(order)
+      Prepocet.produkce_melanz(order)
       
       Prepocet.kontrola_zakonu
       
@@ -46,6 +46,7 @@ class Prepocet
     puts "Eody vyvtoreny"
     return order
   end
+
 
   def self.produkce_suroviny(order)
     for field in Field.includes(:user, :buildings, :resource).all do
@@ -87,6 +88,9 @@ class Prepocet
     arrakis = Planet.arrakis
     leno = Field.find_by_planet_id(arrakis)
     vlastnik = User.spravce_arrakis
+    tech = vlastnik.technologies.where('bonus_type' => "J")
+    lvl = vlastnik.researches.where('technology_id' => tech.id)
+    puts(lvl)
     if vlastnik
       melange = leno.vynos('melange')
     else
