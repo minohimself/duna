@@ -54,9 +54,15 @@ class Prepocet
       if field.planet == Planet.arrakis
         
       else
+        solar_exp = vlastnik.vyskumane_tech(2)
         solar = field.vynos('solar')
+        solar = solar * ((solar_exp * 0.02) + 1)
+        exp_exp = vlastnik.vyskumane_tech(4)
         exp = field.vynos('exp')
+        exp = exp * ((exp_exp * 0.02) + 1)
+        material_exp = vlastnik.vyskumane_tech(3)
         material = field.vynos('material')
+        material = material * ((material_exp * 0.02) + 1)
         population = field.vynos('population')
 
         vlastnik.update_attributes(
@@ -88,11 +94,11 @@ class Prepocet
     arrakis = Planet.arrakis
     leno = Field.find_by_planet_id(arrakis)
     vlastnik = User.spravce_arrakis
-    tech = vlastnik.technologies.where('bonus_type' => "J")
-    lvl = vlastnik.researches.where('technology_id' => tech.id)
-    puts(lvl)
+
     if vlastnik
+      tech = vlastnik.vyskumane_tech(5)
       melange = leno.vynos('melange')
+      melange = melange * ((tech * 0.02) + 1)
     else
       melange = 0.0
     end

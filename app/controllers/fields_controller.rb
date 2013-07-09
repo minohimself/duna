@@ -82,14 +82,19 @@ class FieldsController < ApplicationController
       lvl = current_user.researches.where('technology_id' => tech).first
       bonus = (1 - (lvl.lvl * 0.02)).to_f
 
-      cena_sol = (@budova.naklady_stavba_solary * bonus).to_d
-      cena_mat = (@budova.naklady_stavba_material * bonus).to_d
+      cena_sol = (@budova.naklady_stavba_solary * bonus).to_int
+      cena_mat = (@budova.naklady_stavba_material * bonus).to_int
       mat_na_poli = @resource.material
       pocet_budov = params[:pocet_budov_stavba].to_i
 
       if cena_sol * pocet_budov > current_user.solar
+        if cena_mat * pocet_budov > mat_na_poli
+          flash[:error] = "Nedostatek Surovin (chybi #{cena_sol * pocet_budov - current_user.solar} S  a  #{cena_mat * pocet_budov - mat_na_poli} kg)."
+          redirect_to @field
+        else
         flash[:error] = "Nedostatek Solaru (chybi #{cena_sol * pocet_budov - current_user.solar} S)."
         redirect_to @field
+        end
       elsif cena_mat * pocet_budov > mat_na_poli
         flash[:error] = "Nedostatek materialu (chybi #{cena_mat * pocet_budov - mat_na_poli} kg)."
         redirect_to @field

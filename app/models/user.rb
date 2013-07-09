@@ -247,6 +247,15 @@ class User < ActiveRecord::Base
   def domovske_leno
     self.fields.where(:planet_id => Planet.domovska_rodu(self.house)).first
   end
+  def vyskumane_tech(id)
+        vyskumane_tech =  self.researches.where('technology_id' => id).first
+        if vyskumane_tech
+          return vyskumane_tech.lvl
+        else
+          return 1
+        end
+  end
+
 
   def politicke_postaveni
     # Imperátor > Mistodržící > Regent > Vůdce > Poslanec > Mentat > Vojenský mentat > Diplomat > Guvernér

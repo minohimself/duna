@@ -2,28 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35bbfc21-4287-4cda-983c-2c38e852bebc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fields/_budova.html.erb" afterPath="$PROJECT_DIR$/app/views/fields/_budova.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/fields_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/fields_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/prepocet.rb" afterPath="$PROJECT_DIR$/app/models/prepocet.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="duna.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373390739875" ignored="false" />
-    <file path="/fields_controller.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372702554242" ignored="false" />
+    <file path="/Dummy.txt" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373391226156" ignored="false" />
+    <file path="/fields_controller.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373397169170" ignored="false" />
     <file path="/_budova.html.erb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373391163038" ignored="false" />
     <file path="/application_helper.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372800492080" ignored="false" />
-    <file path="/fragment.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372697690074" ignored="false" />
+    <file path="/fragment.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373395953780" ignored="false" />
     <file path="/field.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372883159539" ignored="false" />
     <file path="/building.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373390137663" ignored="false" />
     <file path="/technologies_controller.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372179701208" ignored="false" />
-    <file path="/user.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372193274312" ignored="false" />
-    <file path="/show.html.erb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372801827610" ignored="false" />
+    <file path="/user.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373395199765" ignored="false" />
+    <file path="/show.html.erb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373396071540" ignored="false" />
     <file path="$PROJECT_DIR$/../game-master/app/controllers/fields_controller.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372703175227" ignored="false" />
     <file path="/application.js" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372883046448" ignored="false" />
     <file path="/_technology.html.erb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372889704708" ignored="false" />
     <file path="/planets_controller.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372802127166" ignored="false" />
     <file path="/technologies.css.scss" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372880128437" ignored="false" />
     <file path="/application.css.erb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1372880242208" ignored="false" />
-    <file path="/prepocet.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373311177320" ignored="false" />
+    <file path="/prepocet.rb" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373395854454" ignored="false" />
     <file path="/Ruby Console" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373388150576" ignored="false" />
     <file path="/customjs.js" changelist="35bbfc21-4287-4cda-983c-2c38e852bebc" time="1373236723456" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,16 +59,25 @@
       <file leaf-file-name="prepocet.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/prepocet.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="574" selection-end="574" vertical-scroll-proportion="27.2">
+            <state line="56" column="0" selection-start="1266" selection-end="1266" vertical-scroll-proportion="-6.48">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="building.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/building.rb">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="978" selection-end="978" vertical-scroll-proportion="0.13541667">
+            <state line="252" column="35" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="finder_methods.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/relation/finder_methods.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="0" selection-start="6275" selection-end="6275" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -75,7 +86,25 @@
       <file leaf-file-name="_budova.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/fields/_budova.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="45" selection-start="1050" selection-end="1050" vertical-scroll-proportion="-19.615385">
+            <state line="26" column="28" selection-start="827" selection-end="827" vertical-scroll-proportion="-15.038462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="66" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fields_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/fields_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="102" selection-start="2630" selection-end="2630" vertical-scroll-proportion="0.4020408">
               <folding />
             </state>
           </provider>
@@ -84,8 +113,10 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/fields/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="70" selection-start="1530" selection-end="1530" vertical-scroll-proportion="-26.5">
-              <folding />
+            <state line="29" column="17" selection-start="771" selection-end="774" vertical-scroll-proportion="-7.9215684">
+              <folding>
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +124,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/planets/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="59" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-15.692307">
+            <state line="39" column="59" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
@@ -119,6 +150,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -126,9 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/planets/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/planets_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/technologies.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
@@ -139,9 +168,12 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$USER_HOME$/Downloads/WOrk/customjs.js" />
-        <option value="$PROJECT_DIR$/app/models/prepocet.rb" />
         <option value="$PROJECT_DIR$/app/models/building.rb" />
         <option value="$PROJECT_DIR$/app/views/fields/_budova.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/prepocet.rb" />
+        <option value="$PROJECT_DIR$/app/views/fields/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/fields_controller.rb" />
       </list>
     </option>
   </component>
@@ -192,6 +224,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="duna" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="duna" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="duna" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -535,7 +577,11 @@
       <created>1373390782779</created>
       <updated>1373390782779</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="latest">
+      <created>1373391241534</created>
+      <updated>1373391241534</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -567,11 +613,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24858116" sideWeight="0.6815069" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29375765" sideWeight="0.6707865" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39702517" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29375765" sideWeight="0.6033708" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3966292" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39816934" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30605382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921347" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.305618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -642,113 +688,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>6</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>51</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>52</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>86</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>87</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>89</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>88</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>103</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>106</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>4</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/prepocet.rb</url>
-          <line>5</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="67" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/load_app_config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/technologies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="74" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="47" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="24" selection-start="63" selection-end="63" vertical-scroll-proportion="0.030088495" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/WOrk/customjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/prepocet.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="574" selection-end="574" vertical-scroll-proportion="27.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/planet.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="29" selection-start="2631" selection-end="2631" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fields/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -777,30 +720,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fields/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/building.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="70" selection-start="1530" selection-end="1530" vertical-scroll-proportion="-26.5">
+        <state line="23" column="27" selection-start="978" selection-end="978" vertical-scroll-proportion="0.20490368">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/planets/show.html.erb">
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/database_statements.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="59" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-15.692307">
+        <state line="193" column="0" selection-start="7635" selection-end="7635" vertical-scroll-proportion="0.73189825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/relation/finder_methods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="6275" selection-end="6275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/dynamic_matchers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.33265308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="252" column="35" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/field.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/prepocet.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1266" selection-end="1266" vertical-scroll-proportion="-6.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fields/_budova.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="45" selection-start="1050" selection-end="1050" vertical-scroll-proportion="-19.615385">
+        <state line="26" column="28" selection-start="827" selection-end="827" vertical-scroll-proportion="-15.038462">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/building.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="978" selection-end="978" vertical-scroll-proportion="0.13541667">
+        <state line="43" column="66" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fields/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="771" selection-end="774" vertical-scroll-proportion="-7.9215684">
+          <folding>
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/planets/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="59" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/fields_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="102" selection-start="2630" selection-end="2630" vertical-scroll-proportion="0.4020408">
           <folding />
         </state>
       </provider>
